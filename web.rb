@@ -355,11 +355,11 @@ def price_lookup(product)
 end
 
 def calculate_price(products, shipping)
-  #amount = 1099  # Default amount.
-  amount = prodcuts
-  #if products
-   # amount = products.reduce(0) { | sum, product | sum + price_lookup(product) }
-  #end
+  amount = 1799  # Default amount.
+  #amount = prodcuts
+  if products
+    amount = products.reduce(0) { | sum, product | sum + price_lookup(product) }
+  end
 
   if shipping
     case shipping
