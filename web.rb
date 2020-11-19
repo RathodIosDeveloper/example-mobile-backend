@@ -382,6 +382,8 @@ def currency_for_country(country)
   case country
   when 'us'
     'usd'
+  when 'sg'
+    'sgd'
   when 'mx'
     'mxn'
   when 'my'
@@ -395,7 +397,7 @@ def currency_for_country(country)
   when 'in'
     'inr'
   else
-    'usd'
+    'sgd'
   end
 end
 
