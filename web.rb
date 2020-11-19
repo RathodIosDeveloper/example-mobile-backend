@@ -224,7 +224,7 @@ post '/create_payment_intent' do
       :amount => payload[:amounts],
       :currency => currency_for_country(payload[:country]),
       :customer => payload[:customer_id] || @customer.id,
-      :description => "Example PaymentIntent",
+      :description => "Pay for laundry services to the perfect gentleman",
       :capture_method => ENV['CAPTURE_METHOD'] == "manual" ? "manual" : "automatic",
       payment_method_types: payment_methods_for_country(payload[:country]),
       :metadata => {
@@ -276,7 +276,7 @@ post '/confirm_payment_intent' do
         :source => payload[:source],
         :payment_method => payload[:payment_method_id],
         :payment_method_types => payment_methods_for_country(payload[:country]),
-        :description => "Example PaymentIntent",
+        :description => "Pay for Laundry services to the perfect gentleman",
         :shipping => payload[:shipping],
         :return_url => payload[:return_url],
         :confirm => true,
