@@ -426,7 +426,7 @@ def payment_methods_for_country(country)
   when 'at'
     %w[card paypal sofort eps]
   when 'sg'
-    %w[card alipay]
+    %w[card]
   when 'in'
     %w[card upi netbanking]
   else
